@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useEventsCatalog } from '../composables/useEventsCatalog'
+
 const { data: catalog } = useEventsCatalog()
 
 const bookHref = computed(() => {
@@ -9,46 +12,68 @@ const bookHref = computed(() => {
 
 <template>
   <header
-    class="fixed top-0 left-0 right-0 z-[100] flex flex-wrap items-center justify-between gap-4 border-b border-gold/20 bg-cream/85 px-5 py-4 backdrop-blur-[14px] sm:px-10 sm:py-5"
+    class="fixed top-0 left-0 right-0 z-[100] border-b border-gold/20 bg-cream/85 px-5 py-4 backdrop-blur-[14px] sm:px-10 sm:py-5"
   >
-    <NuxtLink
-      to="/"
-      class="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+    <div
+      class="max-w-[1400px] mx-auto w-full flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-0"
     >
-      <SparkleLogo variant="light" />
-    </NuxtLink>
-    <nav
-      class="flex flex-wrap items-center gap-6 sm:gap-10 font-mono text-[0.72rem] uppercase tracking-[0.14em]"
-      aria-label="Main"
-    >
-      <NuxtLink
-        to="/"
-        class="text-ink/65 hover:text-ink transition-opacity"
-        active-class="!opacity-100 !text-ink font-medium"
-        exact-active-class="!opacity-100 !text-ink font-medium"
+      <div class="flex items-center justify-between">
+        <NuxtLink
+          to="/"
+          class="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+        >
+          <SparkleLogo variant="light" />
+        </NuxtLink>
+
+        <NuxtLink
+          :to="bookHref"
+          class="bg-ink !text-cream px-4 py-2.5 uppercase tracking-[0.12em] opacity-100 hover:bg-[#1e1a16] transition-colors rounded-sm sm:hidden"
+        >
+          Book Now
+        </NuxtLink>
+      </div>
+
+      <nav
+        class="flex flex-wrap justify-center gap-x-3 gap-y-2 font-mono text-[0.64rem] uppercase tracking-[0.14em] sm:justify-end sm:flex-nowrap sm:gap-10 sm:text-[0.72rem]"
+        aria-label="Main"
       >
-        Home
-      </NuxtLink>
-      <NuxtLink
-        to="/events"
-        class="text-ink/65 hover:text-ink transition-opacity"
-        active-class="!opacity-100 !text-ink font-medium"
-      >
-        Events
-      </NuxtLink>
-      <NuxtLink
-        to="/contact"
-        class="text-ink/65 hover:text-ink transition-opacity"
-        active-class="!opacity-100 !text-ink font-medium"
-      >
-        Contact
-      </NuxtLink>
-      <NuxtLink
-        :to="bookHref"
-        class="bg-ink !text-cream px-4 py-2.5 uppercase tracking-[0.12em] opacity-100 hover:bg-[#1e1a16] transition-colors rounded-sm"
-      >
-        Book Now
-      </NuxtLink>
-    </nav>
+        <NuxtLink
+          to="/"
+          class="text-ink/65 hover:text-ink transition-opacity px-2 py-1 rounded-sm"
+          active-class="!opacity-100 !text-ink font-medium"
+          exact-active-class="!opacity-100 !text-ink font-medium"
+        >
+          Home
+        </NuxtLink>
+        <NuxtLink
+          to="/events"
+          class="text-ink/65 hover:text-ink transition-opacity px-2 py-1 rounded-sm"
+          active-class="!opacity-100 !text-ink font-medium"
+        >
+          Events
+        </NuxtLink>
+        <NuxtLink
+          to="/about"
+          class="text-ink/65 hover:text-ink transition-opacity px-2 py-1 rounded-sm"
+          active-class="!opacity-100 !text-ink font-medium"
+        >
+          About
+        </NuxtLink>
+        <NuxtLink
+          to="/contact"
+          class="text-ink/65 hover:text-ink transition-opacity px-2 py-1 rounded-sm"
+          active-class="!opacity-100 !text-ink font-medium"
+        >
+          Contact
+        </NuxtLink>
+
+        <NuxtLink
+          :to="bookHref"
+          class="hidden sm:inline-flex bg-ink !text-cream px-4 py-2.5 uppercase tracking-[0.12em] opacity-100 hover:bg-[#1e1a16] transition-colors rounded-sm"
+        >
+          Book Now
+        </NuxtLink>
+      </nav>
+    </div>
   </header>
 </template>

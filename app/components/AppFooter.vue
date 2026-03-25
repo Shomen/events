@@ -44,7 +44,9 @@
         </div>
         <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
           <li>
-            <span class="text-sm text-cream/25 cursor-default">About Us</span>
+            <NuxtLink to="/about" class="text-sm text-cream/40 hover:text-cream transition-colors">
+              About Us
+            </NuxtLink>
           </li>
           <li>
             <NuxtLink to="/contact" class="text-sm text-cream/40 hover:text-cream transition-colors">

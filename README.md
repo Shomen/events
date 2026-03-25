@@ -1,75 +1,22 @@
-# Nuxt Minimal Starter
+# Events (Nuxt + Vue)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A responsive event browsing demo where users can filter events by **category** and **month**, open an event page, and complete a **dummy** multi-step booking flow.
 
-## Setup
+## Features
+- Home landing page with curated copy and featured event highlight
+- Events list (`/events`) with category filter + month filter
+- Event detail (`/events/[slug]`) with a 4-step booking UI (dummy flow)
+- Contact page (`/contact`) with a styled form shell and demo submit state
+- About page (`/about`) with dummy content (same visual style)
 
-Make sure to install dependencies:
+## Data
+- Event catalog stored in `public/data/events.json`
+- Loaded with `useEventsCatalog()` (`app/composables/useEventsCatalog.ts`)
 
-```bash
-# npm
-npm install
+## Technologies
+- Nuxt 4 + Vue 3 + TypeScript
+- Tailwind CSS via `@nuxtjs/tailwindcss`
+- Styling driven by a custom `tailwind.config.ts` theme (colors, fonts, backgrounds)
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Notes
+- There is **no backend yet**. Booking is simulated in the browser and generates a fake booking reference.

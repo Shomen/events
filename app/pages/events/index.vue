@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useEventsCatalog } from '../../composables/useEventsCatalog'
+
 const route = useRoute()
+const router = useRouter()
 const { data: catalog, pending, error } = useEventsCatalog()
 
 const selectedCategoryId = computed(() => {
@@ -14,8 +19,18 @@ const monthOptions = computed(() => {
   for (const e of catalog.value?.events ?? []) {
     set.add(e.date.slice(0, 7))
   }
-  return [...set].sort()
+  const months = [...set].sort()
+  return months.map((m) => ({ value: m, label: formatMonthLabel(m) }))
 })
+
+function formatMonthLabel(ym: string) {
+  const match = ym.match(/^(\d{4})-(\d{2})$/)
+  if (!match) return ym
+  const year = Number(match[1])
+  const monthIndex = Number(match[2]) - 1
+  const d = new Date(Date.UTC(year, monthIndex, 1))
+  return new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric' }).format(d)
+}
 
 const filteredEvents = computed(() => {
   let list = [...(catalog.value?.events ?? [])]
@@ -31,7 +46,7 @@ const filteredEvents = computed(() => {
 })
 
 function setCategory(id: string | undefined) {
-  navigateTo({ path: '/events', query: id ? { category: id } : {} })
+  router.push({ path: '/events', query: id ? { category: id } : {} })
 }
 
 function clearFilters() {
@@ -100,8 +115,8 @@ function clearFilters() {
           class="w-full bg-paper border-[1.5px] border-ink/12 px-4 py-3 font-sans text-sm text-ink rounded-sm outline-none focus:border-gold cursor-pointer"
         >
           <option value="">All upcoming</option>
-          <option v-for="m in monthOptions" :key="m" :value="m">
-            {{ m }}
+          <option v-for="m in monthOptions" :key="m.value" :value="m.value">
+            {{ m.label }}
           </option>
         </select>
       </div>
