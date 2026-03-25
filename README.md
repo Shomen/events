@@ -2,6 +2,9 @@
 
 A responsive event browsing demo where users can filter events by **category** and **month**, open an event page, and complete a **dummy** multi-step booking flow.
 
+## Live Demo
+Check it out here: [Sparkle on Vercel](https://events-woad-seven.vercel.app/)
+
 ## Features
 - Home landing page with curated copy and featured event highlight
 - Events list (`/events`) with category filter + month filter

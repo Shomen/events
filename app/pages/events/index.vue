@@ -65,8 +65,7 @@ function clearFilters() {
         Events
       </h1>
       <p class="text-ink/55 leading-relaxed text-base sm:text-lg font-light">
-        Filter by category and month, then open an event for full details and booking. Data loads from
-        <code class="font-mono text-xs bg-warm px-1.5 py-0.5 rounded">/data/events.json</code>.
+        Filter by category and month, then open an event for full details and booking.
       </p>
     </header>
 
