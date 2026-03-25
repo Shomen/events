@@ -5,7 +5,7 @@ import { useEventsCatalog } from '../../composables/useEventsCatalog'
 
 const route = useRoute()
 const router = useRouter()
-const { data: catalog, pending, error } = useEventsCatalog()
+const { data: catalog, pending, error } = await useEventsCatalog()
 
 const selectedCategoryId = computed(() => {
   const q = route.query.category

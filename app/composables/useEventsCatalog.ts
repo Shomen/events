@@ -1,3 +1,5 @@
+import eventsCatalogJson from '../../public/data/events.json'
+
 export interface TicketTier {
   id: string
   name: string
@@ -60,7 +62,10 @@ export interface EventsCatalog {
 }
 
 export function useEventsCatalog() {
-  return useFetch<EventsCatalog>('/data/events.json', {
-    key: 'events-catalog',
+  // Import the JSON so SSR doesn't depend on network/fetching `public/`.
+  const catalog = eventsCatalogJson as EventsCatalog
+
+  return useAsyncData('events-catalog', async () => catalog, {
+    default: () => catalog,
   })
 }
