@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "eventsSeason": 840,
+    "attendees": "120k",
+    "satisfaction": "98%",
+    "cities": 24,
+    "rating": "4.9"
+  },
+  "categories": [
+    { "id": "jazz", "name": "Jazz & Blues", "icon": "🎷", "count": 47 },
+    { "id": "theatre", "name": "Theatre & Arts", "icon": "🎭", "count": 83 },
+    { "id": "classical", "name": "Classical", "icon": "🎶", "count": 29 },
+    { "id": "gala", "name": "Galas & Soirées", "icon": "🎉", "count": 18 }
+  ],
+  "events": [
+    {
+      "slug": "moonlit-jazz-grand-pavilion",
+      "title": "Moonlit Jazz at The Grand Pavilion",
+      "titleLines": ["Moonlit Jazz", "at", "The Grand Pavilion"],
+      "titleEmphasisLineIndex": 2,
+      "category": "Jazz & Blues",
+      "tag": "Jazz & Blues",
+      "date": "2025-06-14",
+      "weekday": "Friday",
+      "time": "8:00 PM",
+      "doorsTime": "7:00 PM",
+      "city": "New York City",
+      "venue": "The Grand Pavilion",
+      "priceFrom": 45,
+      "currency": "€",
+      "imageVariant": 1,
+      "emoji": "🎷",
+      "featured": true,
+      "featuredOnHome": true,
+      "duration": "~3 hours",
+      "capacity": "Limited — 200 seats",
+      "description": "An enchanting evening under the stars with the city's finest jazz ensemble. Expect soulful improvisation, sultry vocals, and an atmosphere unlike anything else.",
+      "about": "Join us for an extraordinary night of live jazz at the iconic Grand Pavilion. Nestled in the heart of Manhattan, this intimate venue has been home to some of the city's most celebrated musical moments.\n\nThe evening features The Marcus Cole Quartet — led by internationally acclaimed saxophonist Marcus Cole — alongside guest vocalist Simone Beaumont, whose voice has been described as \"velvet wrapped in smoke.\" Doors open at 7:00 PM; the performance begins at 8:00 PM sharp. Light refreshments and a full bar will be available throughout.",
+      "lineup": [
+        { "num": "01", "name": "Doors Open & Cocktails", "time": "7:00 PM" },
+        { "num": "02", "name": "Marcus Cole Quartet — Set I", "time": "8:00 PM" },
+        { "num": "03", "name": "Interval — Bar & Canapes", "time": "9:15 PM" },
+        { "num": "04", "name": "Simone Beaumont joins for Set II", "time": "9:45 PM" },
+        { "num": "05", "name": "Encore & Close", "time": "11:00 PM" }
+      ],
+      "tickets": [
+        {
+          "id": "ga",
+          "name": "General Admission",
+          "description": "Open seating, access from 7:00 PM",
+          "price": 45
+        },
+        {
+          "id": "vip",
+          "name": "Premium Front Row",
+          "description": "Reserved front-row seating + welcome cocktail",
+          "price": 85
+        },
+        {
+          "id": "bs",
+          "name": "Backstage Experience",
+          "description": "Meet the artists + reserved table + all-inclusive bar",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "slug": "hamlet-reimagined",
+      "title": "Hamlet Reimagined",
+      "titleLines": ["Hamlet", "Reimagined"],
+      "titleEmphasisLineIndex": 1,
+      "category": "Theatre & Arts",
+      "tag": "Theatre",
+      "date": "2025-06-15",
+      "weekday": "Saturday",
+      "time": "7:30 PM",
+      "doorsTime": "6:45 PM",
+      "city": "London",
+      "venue": "Riverside Theatre",
+      "priceFrom": 65,
+      "currency": "€",
+      "imageVariant": 2,
+      "emoji": "🎭",
+      "featured": false,
+      "featuredOnHome": true,
+      "duration": "~2h 45m",
+      "capacity": "320 seats",
+      "description": "A bold contemporary staging of Shakespeare’s masterpiece — intimate, visceral, and unforgettable.",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Our creative team reimagines Elsinore as a modern political arena where every soliloquy cuts closer to the bone.",
+      "lineup": [
+        { "num": "01", "name": "Doors & prelude", "time": "6:45 PM" },
+        { "num": "02", "name": "Act I & II", "time": "7:30 PM" },
+        { "num": "03", "name": "Interval", "time": "8:50 PM" },
+        { "num": "04", "name": "Act III–V", "time": "9:15 PM" }
+      ],
+      "tickets": [
+        { "id": "ga", "name": "Standard", "description": "Upper circle", "price": 65 },
+        { "id": "vip", "name": "Stalls", "description": "Best views", "price": 95 }
+      ]
+    },
+    {
+      "slug": "midsummer-night-gala",
+      "title": "Midsummer Night Gala",
+      "titleLines": ["Midsummer", "Night Gala"],
+      "titleEmphasisLineIndex": 0,
+      "category": "Galas & Soirées",
+      "tag": "Gala",
+      "date": "2025-06-21",
+      "weekday": "Sunday",
+      "time": "9:00 PM",
+      "doorsTime": "8:00 PM",
+      "city": "Paris",
+      "venue": "Hôtel des Lumières",
+      "priceFrom": 120,
+      "currency": "€",
+      "imageVariant": 3,
+      "emoji": "🌙",
+      "featured": false,
+      "featuredOnHome": true,
+      "duration": "~4 hours",
+      "capacity": "150 guests",
+      "description": "Black tie, live orchestra, and midnight dancing under crystal chandeliers.",
+      "about": "Lorem ipsum dolor sit amet. A fundraising gala supporting youth arts programs across Île-de-France.",
+      "lineup": [
+        { "num": "01", "name": "Champagne reception", "time": "8:00 PM" },
+        { "num": "02", "name": "Seated dinner & auction", "time": "9:00 PM" },
+        { "num": "03", "name": "Orchestra & dancing", "time": "10:30 PM" }
+      ],
+      "tickets": [
+        { "id": "ga", "name": "Individual", "description": "Gala seating", "price": 120 },
+        { "id": "vip", "name": "Patron table", "description": "Table of 8, premium placement", "price": 1200 }
+      ]
+    },
+    {
+      "slug": "vienna-philharmonic-summer",
+      "title": "Vienna Philharmonic",
+      "titleLines": ["Vienna", "Philharmonic"],
+      "titleEmphasisLineIndex": null,
+      "category": "Classical",
+      "tag": "Classical",
+      "date": "2025-06-18",
+      "weekday": "Wednesday",
+      "time": "7:00 PM",
+      "doorsTime": "6:15 PM",
+      "city": "Vienna",
+      "venue": "Musikverein",
+      "priceFrom": 89,
+      "currency": "€",
+      "imageVariant": 4,
+      "emoji": "🎻",
+      "featured": false,
+      "featuredOnHome": true,
+      "duration": "~2h 30m",
+      "capacity": "Sold in tiers",
+      "description": "Summer night program: Strauss, Mahler fragments, and a standing ovation you will remember.",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The golden hall glows as the orchestra opens the season’s outdoor series.",
+      "lineup": [
+        { "num": "01", "name": "Pre-concert talk", "time": "6:15 PM" },
+        { "num": "02", "name": "Programme Part I", "time": "7:00 PM" },
+        { "num": "03", "name": "Interval", "time": "7:55 PM" },
+        { "num": "04", "name": "Programme Part II", "time": "8:20 PM" }
+      ],
+      "tickets": [
+        { "id": "ga", "name": "Category C", "description": "Upper gallery", "price": 89 },
+        { "id": "vip", "name": "Category A", "description": "Parquet", "price": 165 }
+      ]
+    },
+    {
+      "slug": "art-after-dark-berlin",
+      "title": "Art After Dark",
+      "titleLines": ["Art After", "Dark"],
+      "titleEmphasisLineIndex": 1,
+      "category": "Theatre & Arts",
+      "tag": "Exhibition",
+      "date": "2025-06-19",
+      "weekday": "Thursday",
+      "time": "6:00 PM",
+      "doorsTime": "5:30 PM",
+      "city": "Berlin",
+      "venue": "Kunsthalle East",
+      "priceFrom": 35,
+      "currency": "€",
+      "imageVariant": 5,
+      "emoji": "🎨",
+      "featured": false,
+      "featuredOnHome": true,
+      "duration": "~3 hours",
+      "capacity": "Open capacity",
+      "description": "Museum night: DJs, projections, and guided tours through the new modern wing.",
+      "about": "Lorem ipsum dolor sit amet. Curated cocktails and live visuals respond to the collection — no two visits feel the same.",
+      "lineup": [
+        { "num": "01", "name": "Early access tour", "time": "5:30 PM" },
+        { "num": "02", "name": "Gallery opens to public", "time": "6:00 PM" },
+        { "num": "03", "name": "Live set — Atrium", "time": "8:00 PM" }
+      ],
+      "tickets": [
+        { "id": "ga", "name": "General", "description": "Full evening access", "price": 35 }
+      ]
+    }
+  ]
+}

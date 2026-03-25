@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
-      title: 'OVATION — Event Experiences',
+      title: 'Sparkle — Event Experiences',
       htmlAttrs: { lang: 'en' },
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
