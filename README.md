@@ -10,13 +10,12 @@ A responsive event browsing demo where users can filter events by **category** a
 - About page (`/about`) with dummy content (same visual style)
 
 ## Data
-- Event catalog stored in `public/data/events.json`
-- Loaded with `useEventsCatalog()` (`app/composables/useEventsCatalog.ts`)
+- Event catalog stored in json file
 
 ## Technologies
 - Nuxt 4 + Vue 3 + TypeScript
 - Tailwind CSS via `@nuxtjs/tailwindcss`
-- Styling driven by a custom `tailwind.config.ts` theme (colors, fonts, backgrounds)
+- Styling driven by a custom theme (colors, fonts, backgrounds)
 
 ## Notes
 - There is **no backend yet**. Booking is simulated in the browser and generates a fake booking reference.
